@@ -2,7 +2,7 @@ name: SMS Bombing
 on:
   push:
     branches:
-      - smsbomber
+      
 
 jobs:
   build:
