@@ -1,0 +1,24 @@
+name: SMS Bombing
+on:
+  push:
+    branches:
+      - smsbomber
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: 11
+
+    - name: Build and run SMS Bomber
+      run: |
+        javac smsbomber.js
+        java SmsBombing
+        
